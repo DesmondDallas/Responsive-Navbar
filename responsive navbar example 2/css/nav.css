@@ -1,0 +1,76 @@
+/* --------------------------
+  Main Styles
+--------------------------- */
+/* using twoflexcontinaers for main-header & nav */
+.main-header, .nav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.main-header {
+  padding: 2em;
+}
+
+.site-logo {
+  width: 110px;
+  align-self: center;
+}
+
+.nav {
+  margin-top: 1.5em;
+}
+
+.nav a {
+  display: block;
+  color: #797e83;
+  font-size: 1.125em;
+  font-weight: 300;
+  text-align: center;
+  padding: .4em;
+  border-bottom: 1px solid#ebecec;
+}
+
+.nav a:hover {
+  color: #0b0b0b;
+  border-bottom-color: #52bab3;
+}
+
+/* --------------------------
+  Media Queries
+--------------------------- */
+
+@media (min-width: 769px) {
+  .main-header {
+  height: 200px;
+  justify-content: flex-end; /* places the main header at bottom of column */
+  }
+  .site-logo {
+  width: 140px;
+  }
+  .nav { 
+  margin-top: 3em; /*adds space between logo */
+  flex-direction: row; /* will change to row under 769px */
+  justify-content: space-between; /* evenly adds space between li */
+  }
+  .nav a { 
+  border-bottom-color: transparent; /* remove bottom border */
+  /*margin-right: 5px; if use this cancel justify-content */
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-header {
+  flex-direction: row; /* places nav and logo on same line */
+  }
+.site-logo {
+  margin-right: auto; /* moves logo to left */
+}
+.nav {
+  margin-top: 0; /* removes margin above the nav items */
+  align-self: center; /* positions nav verticle center of the header */
+  }
+.nav li {
+  margin-left: .65em; /* spacing between nav items */
+  margin-right: .65em; /* spacing between nav items */
+}
